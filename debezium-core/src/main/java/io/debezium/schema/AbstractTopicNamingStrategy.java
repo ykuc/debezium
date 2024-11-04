@@ -165,14 +165,15 @@ public abstract class AbstractTopicNamingStrategy<I extends DataCollectionId> im
             changed = true;
         }
 
-        if (changed) {
-            LOGGER.warn("Topic '{}' name isn't a valid topic name, replacing it with '{}'.", topicName, sanitizedName);
+        return topicName;
+        // if (changed) {
+        //     LOGGER.warn("Topic '{}' name isn't a valid topic name, replacing it with '{}'.", topicName, sanitizedName);
 
-            return sanitizedName;
-        }
-        else {
-            return topicName;
-        }
+        //     return sanitizedName;
+        // }
+        // else {
+        //     return topicName;
+        // }
     }
 
     protected boolean isValidCharacter(char c) {

@@ -1682,12 +1682,12 @@ public abstract class CommonConnectorConfig {
     public static int validateTopicName(Configuration config, Field field, ValidationOutput problems) {
         String name = config.getString(field);
 
-        if (name != null) {
-            if (!TOPIC_NAME_PATTERN.asPredicate().test(name)) {
-                problems.accept(field, name, name + " has invalid format (only the underscore, hyphen, dot and alphanumeric characters are allowed)");
-                return 1;
-            }
-        }
+        // if (name != null) {
+        //     if (!TOPIC_NAME_PATTERN.asPredicate().test(name)) {
+        //         problems.accept(field, name, name + " has invalid format (only the underscore, hyphen, dot and alphanumeric characters are allowed)");
+        //         return 1;
+        //     }
+        // }
         return 0;
     }
 

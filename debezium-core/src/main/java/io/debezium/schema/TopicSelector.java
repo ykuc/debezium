@@ -128,15 +128,16 @@ public class TopicSelector<I extends DataCollectionId> {
                 }
             }
 
-            if (changed) {
-                String sanitizedName = sanitizedNameBuilder.toString();
-                LOGGER.warn("Topic '{}' name isn't a valid topic name, replacing it with '{}'.", topicName, sanitizedName);
+            return topicName;
+            // if (changed) {
+            //     String sanitizedName = sanitizedNameBuilder.toString();
+            //     LOGGER.warn("Topic '{}' name isn't a valid topic name, replacing it with '{}'.", topicName, sanitizedName);
 
-                return sanitizedName;
-            }
-            else {
-                return topicName;
-            }
+            //     return sanitizedName;
+            // }
+            // else {
+            //     return topicName;
+            // }
         }
 
         /**
